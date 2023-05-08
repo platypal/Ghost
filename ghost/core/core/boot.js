@@ -328,6 +328,9 @@ async function initServices({config}) {
 
     const urlUtils = require('./shared/url-utils');
 
+    // Tip Jar custom add-on
+    const tipJar = require('./server/services/tip-jar');
+
     // NOTE: limits service has to be initialized first
     // in case it limits initialization of any other service (e.g. webhooks)
     await limits.init();
@@ -361,7 +364,8 @@ async function initServices({config}) {
         linkTracking.init(),
         emailSuppressionList.init(),
         slackNotifications.init(),
-        mediaInliner.init()
+        mediaInliner.init(),
+        tipJar.init()
     ]);
     debug('End: Services');
 

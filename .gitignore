@@ -134,3 +134,6 @@ Caddyfile
 # Announcement-Bar
 /ghost/announcement-bar/umd
 /ghost/announcement-bar/build
+
+# Dev Server Custom Config
+/ghost/core/core/shared/config/env/*
