@@ -243,5 +243,9 @@ module.exports = {
 
     get feedbackMembers() {
         return apiFramework.pipeline(require('./feedback-members'), localUtils, 'members');
+    },
+
+    get tipJar() {
+        return apiFramework.pipeline(require('./tip-jar'), localUtils, 'content');
     }
 };

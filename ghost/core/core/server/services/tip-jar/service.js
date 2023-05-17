@@ -1,15 +1,14 @@
-class TipJarServiceWrapper {
+class TipJarAPIWrapper {
     async init() {
         if (this.api) {
             // Already done
             return;
         }
-        const {TipJarService} = require('../../../../../tip-jar');
+        const {TipJarAPI} = require('../../../../../tip-jar');
+        const ProductModel = require('../../models/product');
 
-        // const models = require('../../models');
-
-        this.api = new TipJarService({});
+        this.api = new TipJarAPI({ProductModel: ProductModel});
     }
 }
 
-module.exports = new TipJarServiceWrapper();
+module.exports = new TipJarAPIWrapper();

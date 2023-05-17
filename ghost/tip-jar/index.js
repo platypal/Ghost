@@ -1,3 +1,3 @@
 module.exports = {
-    TipJarService: require('./lib/tip-jar')
+    TipJarAPI: require('./lib/TipJarAPI')
 };

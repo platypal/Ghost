@@ -39,5 +39,8 @@ module.exports = function apiRoutes() {
     router.get('/tiers', mw.authenticatePublic, http(api.tiersPublic.browse));
     router.get('/offers/:id', mw.authenticatePublic, http(api.offersPublic.read));
 
+    // ## TipJar
+    router.get('/tipjar', mw.authenticatePublic, http(api.tipJar.browse));
+
     return router;
 };
